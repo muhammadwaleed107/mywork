@@ -1,0 +1,66 @@
+<ion-card no-margin>
+  <ion-grid no-padding>
+    <div class="custom-card">
+      <ion-row>
+        <ion-col size="2" text-center>
+          <p no-margin>A</p>
+        </ion-col>
+        <ion-col size="7">
+          <p no-margin>{{item.EventName}}</p>
+          <p no-margin>{{item.SlugTitle}}</p>
+        </ion-col>
+        <ion-col size="3">
+          <p no-margin text-right>3 min ago</p>
+        </ion-col>
+        <ion-col size="12">
+          <p no-margin class="urdu-desc">{{item.AssignmentTitle}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="assignment-detail">
+          <ion-col size="6">
+            <p>
+              <ion-icon name="clock"></ion-icon> {{item.DeadLineAt | date}}
+            </p>
+          </ion-col>
+          <ion-col size="6">
+            <p>
+                <span>{{item.AssignedByName}}</span>
+            </p>
+            <p><img [src]="item.AssignedByProfileImage"></p>
+          </ion-col>
+        </ion-row>
+      <ion-row class="assignment-detail">
+          <ion-col size="3">
+            <p>
+              <ion-icon name="car"></ion-icon> {{item.SourceName}}
+            </p>
+          </ion-col>
+          <ion-col size="9">
+            <p>
+                <ion-icon name="pin"></ion-icon> <span>{{item.AssiignmentLocationTitle}}</span>
+            </p>
+          </ion-col>
+        </ion-row>
+    <ion-row>
+        <ion-col text-right>
+          <button class="button-reopen" ion-button><span *ngIf="item.AssignmentStatusName=='Pending'">Mark-close</span><span *ngIf="item.AssignmentStatusName=='Closed'">Re-Open</span></button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <ion-row>
+        <ion-col size="3">
+          <p no-margin>
+            <ion-icon name="car"></ion-icon>
+          </p>
+          <p no-margin>Car</p>
+        </ion-col>
+        <ion-col size="8">
+          <p no-margin>
+            <ion-icon name="pin"></ion-icon>
+          </p>
+          <p no-margin>Paragon H.Sch,Site Area, Khi</p>
+        </ion-col>
+      </ion-row> -->
+
+  </ion-grid>
+</ion-card>

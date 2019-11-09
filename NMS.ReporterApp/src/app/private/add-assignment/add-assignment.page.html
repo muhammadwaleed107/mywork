@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>New Assignment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row no-margin>
+      <ion-input class="shared" placeholder="Enter Assignment Title"></ion-input>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-select class="shared" placeholder="Select Happening">
+        <ion-select-option value="S">STD Case</ion-select-option>
+        <ion-select-option value="J">Jalli Account</ion-select-option>
+        <ion-select-option value="N">NAB Cases</ion-select-option>
+      </ion-select>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-item class="shared">
+        <ion-avatar class="footer_image">
+          <img src="https://cdn2.iconfinder.com/data/icons/business-finance-vol-1-53/30/Untitled-1-13-512.png">
+        </ion-avatar>
+        <ion-label no-margin> Deadline</ion-label>
+        <ion-datetime displayFormat="MMM/D/YYYY | hh:mm A" pickerFormat="MM/DD/YYYY H:mm" placeholder="01/29/2019 | 07:30 PM"></ion-datetime>
+      </ion-item>
+      <!-- <ion-input class="shared" placeholder="Deadline 01/29/2019 | 07:30 PM">
+          <ion-avatar class="footer_image">
+            <img src="https://cdn2.iconfinder.com/data/icons/business-finance-vol-1-53/30/Untitled-1-13-512.png">
+          </ion-avatar>
+        </ion-input> -->
+    </ion-row>
+    <ion-row no-margin>
+      <ion-select class="shared" placeholder="Select City">
+        <ion-select-option value="K">Karachi</ion-select-option>
+        <ion-select-option value="L">Lahore</ion-select-option>
+        <ion-select-option value="P">Peshawar</ion-select-option>
+      </ion-select>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-select class="shared" placeholder="Medium">
+        <ion-select-option value="C">Car</ion-select-option>
+        <ion-select-option value="D">DSNG</ion-select-option>
+      </ion-select>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-select class="shared" placeholder="Select Reporter">
+        <ion-select-option value="S">Shoaib</ion-select-option>
+        <ion-select-option value="A">Asad</ion-select-option>
+      </ion-select>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-input no-padding class="shared urdu-desc urdu-font" placeholder="یہاں لکھیں">
+        <ion-button>
+          <ion-icon name="send"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="camera" onclick=""></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="attach"></ion-icon>
+        </ion-button>
+      </ion-input>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

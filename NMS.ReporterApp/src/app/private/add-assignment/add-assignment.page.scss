@@ -1,0 +1,35 @@
+.shared
+{
+    border: solid whitesmoke;
+    border-radius: 9px;
+    width: 100% !important;
+}
+.footer_image
+{
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    
+}
+.urdu-font{
+    line-height: 1.7em;
+    font-weight: 600;
+}
+ion-icon
+{
+    height: 25px;
+    width: 25px;
+    padding-right: 3px;
+}
+ion-button
+{
+    --background: transparent;
+    --box-shadow: none;
+    --color: black;
+    --padding-end: 0px;
+    --padding-start: 0px;
+}
+ion-item
+{
+    --padding-start: 0px;
+}

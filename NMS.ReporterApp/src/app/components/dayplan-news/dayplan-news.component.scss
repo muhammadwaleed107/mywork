@@ -1,0 +1,43 @@
+
+ion-row{
+    border: solid;
+    border-width: 1px;
+    border-color: #d7d8da;
+    border-collapse: collapse;
+    ion-col:first-child{
+        .small-text{
+            padding-top: 5px;
+            color: #8c949f;
+            font-size: 11px;
+        }
+    }
+    ion-col:nth-child(2){
+        .urdu-font {
+            line-height: 1.7em;
+            font-weight: 600;
+            // padding-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    ion-col:nth-child(3){
+        .circle {
+            text-align: center;
+            width: 30px;
+            background: var(--ion-red);
+            height: 30px;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 11px;
+            padding-top: 9px;
+            margin: 0 auto;
+            cursor: pointer;
+            background: #a7a8ad;
+        }
+        
+        
+        
+    }
+    
+}

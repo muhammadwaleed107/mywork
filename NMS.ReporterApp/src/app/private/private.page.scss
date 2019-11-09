@@ -1,0 +1,38 @@
+.badge {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #181c35;
+    padding-top: 8px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #e7eaf3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+span {
+    .badge1 {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        &[data-badge]:after {
+            content: attr(data-badge);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: .5em;
+            background: var(--ion-red);
+            color: white;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 18px;
+            border-radius: 50%;
+        }
+    }
+}

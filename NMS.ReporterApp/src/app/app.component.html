@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu [menuId]="'1'">
+      <!-- <ion-header>
+        <ion-toolbar>
+          <ion-title no-padding>Menu</ion-title>
+          <ion-avatar slot="start" class="user-dp">
+            <img src="https://picsum.photos/200">
+          </ion-avatar>
+          <ion-label>Sahiwal, CTD</ion-label>
+         
+        </ion-toolbar>
+      </ion-header> -->
+      <ion-content>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <!-- <img [src]="https://pixel.nymag.com/imgs/daily/vulture/2017/06/14/14-tom-cruise.w700.h700.jpg"> -->
+            <img src="../assets/img/534201.jpg">
+          </ion-avatar>
+          <ion-label class="user-title"><strong>{{ userMenu.FullName }}</strong><br><ion-icon name="pin"></ion-icon>{{ userMenu.CityLoc }}</ion-label>
+        </ion-item>
+        <!-- <ion-button fill="clear" class="location">
+            Karachi
+            <ion-icon slot="end" name="pin"></ion-icon>
+          </ion-button> -->
+        <ion-list no-padding>
+          <ion-item lines="none">
+            <ion-icon name="barcode" class="lightgrey"></ion-icon>
+            <ion-select>
+                <ion-select-option *ngFor="let item of userMenu.Beat;" value="{{item.BeatId}}">{{item.BeatName}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <p no-margin padding-start class="lightgrey">Current Location</p>
+          <p no-margin padding-start class="activeCity">{{currentLocation}}</p>
+        </ion-list>
+        <ion-list no-padding>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon" class="icon-red"></ion-icon>
+              <ion-label>
+                {{p.title}}<span *ngIf="p.count">(02)</span>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <ion-list no-padding>
+          <ion-item>
+            <ion-icon slot="start" name="pin" class="icon-red"></ion-icon>
+            <ion-label>
+              Location
+            </ion-label>
+            <ion-toggle [(ngModel)]="locationEnable" (ngModelChange)="locationChange($event)"></ion-toggle>
+          </ion-item>
+          <ion-item (click)="logout()">
+            <ion-icon slot="start" name="power" class="icon-red"></ion-icon>
+            <ion-label>
+              Sign Out
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+      <p class="copyright">&copy; All Rights Rerserved</p>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

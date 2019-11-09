@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>signin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form [formGroup]="loginForm" style="width: 29%;margin-left: 40%;margin-top: 8%;">
+  <img class="top_spacing">
+  <ion-title class="top_spacing" >News<br>Management<br>System</ion-title>
+  <ion-item class="top_spacing">
+      <ion-input  formControlName="username" type="text" placeholder="User Name"></ion-input>
+  </ion-item>
+  <ion-item class="top_spacing">
+    <ion-input  formControlName="password" type="password"  placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-button (click)="loginv2()" class="top_spacing"  shape="round" size="default" expand="block" color="danger">Login</ion-button> 
+</form>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <!-- <ion-menu-button slot="start"></ion-menu-button> -->
+      <ion-back-button slot="start"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">Monitoring Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="overflow-y: hidden;">
+  <ion-grid no-padding>
+    <ion-row class="columns mainBase">
+      <ion-col size="12" size-md="4" class="dnone scroll">
+        <app-filters></app-filters>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size-md="8">
+        <app-monitoring></app-monitoring>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

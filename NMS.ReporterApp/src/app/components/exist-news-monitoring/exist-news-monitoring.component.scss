@@ -1,0 +1,128 @@
+ion-card {
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: #fff;
+}
+
+.circle {
+    text-align: center;
+    width: 30px;
+    height: 30px; // background: var(--ion-red);
+    background: #b46df9;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    padding-top: 9px;
+    margin: 0 auto;
+}
+
+.circle-sm {
+    text-align: center;
+    width: 20px;
+    height: 20px; // background: var(--ion-red);
+    background: #889198;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    padding-top: 4px;
+}
+
+.circleTransparent-sm {
+    color: #ed0d0e;
+    font-weight: 700;
+    padding-top: 3px;
+}
+
+.dark-grey {
+    background: #a7a8ad;
+}
+
+.light-grey {
+    background: #d4d5da;
+}
+
+.sky-blue {
+    color: #85c0f8;
+}
+
+.light-green {
+    background: #d1e3cb !important;
+    ion-icon {
+        color: #75bc5c !important;
+    }
+}
+
+.light-pink {
+    background: #f4cccc !important;
+    ion-icon {
+        color: #d06c6c !important;
+    }
+}
+
+.light-yellow {
+    background: #e6d5a1;
+    ion-icon {
+        color: #c8ad56;
+    }
+}
+
+p {
+    font-size: 11px;
+    margin: 0;
+    padding-top: 9px;
+}
+
+.read-more {
+    color: #ed0d0d;
+    font-weight: 600;
+}
+
+.news-detail {
+    border-top: 1px solid #e5ebeb;
+}
+
+.beat {
+    color: #a2a6b2;
+    padding-top: 8px;
+    font-weight: 700;
+}
+
+h5 {
+    color: #22222a;
+    padding-top: 5px;
+}
+
+.urdu-font {
+    line-height: 1.7em;
+    font-weight: 600;
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.beat-option {
+    padding-top: 5px;
+    p {
+        text-align: center;
+        padding-top: 4px;
+        background: #d4d5da;
+        color: #fff;
+        border-radius: 6px;
+        width: 40px;
+    }
+    .live-online {
+        background: #da0000 !important;
+    }
+    .circle {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        padding-top: 4px;
+        margin-right: 4px;
+        background: #889198;
+    }
+}

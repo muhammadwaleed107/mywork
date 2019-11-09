@@ -1,0 +1,33 @@
+.cardContent {
+    p {
+        display: inline;
+
+    }
+
+    p:nth-child(2) {
+        margin-left: 8px;
+        color: black
+    }
+}
+
+.itemClass {
+    label:nth-child(1) {
+        padding-right: 10px;
+    }
+
+}
+
+.rowData {
+    height: calc(100% - 50px);
+    overflow: auto;
+    ion-row {
+        background-color: #d8d8d8;
+        /* border: 1px solid; */
+        margin-top: 5px;
+        border-radius: 6px;
+    }
+}
+
+ion-content{
+    --background: #f5f5f5;
+}

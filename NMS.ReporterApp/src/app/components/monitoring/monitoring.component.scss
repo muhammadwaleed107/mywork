@@ -1,0 +1,61 @@
+.urdu-font {
+    line-height: 1.7em;
+    font-weight: 600;
+}
+
+ion-select {
+    width: 100%;
+}
+
+ion-header {
+    color: tan;
+    background-color: black;
+}
+
+ion-content {
+    height: 75%;
+}
+
+ion-footer {
+    height: 25%;
+    ion-row {
+        ion-col:not(.send-icon) {
+            background: #fff;
+            border: 2px solid #e8e8e8;
+            border-radius: 6px;
+            ion-list {
+                ion-item {
+                    --border-width: 0;
+                }
+            }
+        }
+        .send-icon {
+            ion-icon {
+                font-size: 24px;
+                color: #cd0300;
+                padding-top: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.drop-down {
+    width: 100%;
+    ion-icon {
+        color: #889198;
+    }
+    ion-label {
+        color: #c8cccf;
+        font-size: 13px;
+    }
+    ion-select {
+        opacity: 0;
+    }
+    p {
+        color: var(--ion-red);
+        font-size: 13px;
+        margin-right: 8px;
+        font-weight: 600;
+    }
+}

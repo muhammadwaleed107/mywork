@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2018", //default is es5
+    "outDir": "./dist", //change the output directory
+    //"baseUrl": "./src",
+    "module": "commonjs", //CommonJs style module in output
+    "declaration": true,
+    "resolveJsonModule": true, //to import out json database
+    //"moduleResolution": "node"
+    "strict": true
+  },
+  "include": [
+    "src/**/*.ts" //which kind of files to compile
+  ],
+  "exclude": [
+    "node_modules" //which files or directories to ignore
+  ]
+}

@@ -1,0 +1,31 @@
+ion-card {
+    border-radius: 0;
+    ion-row {
+        background-color: #f2f3f5;
+        ion-col:first-child {
+            p {
+                font-size: x-small;
+                color: #899299;
+            }
+        }
+        ion-col:nth-child(2) {
+            line-height: 1.7em;
+            font-weight: 600;
+            padding-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        background: rgb(212, 213, 217);
+        color: #fff;
+        border-radius: 50%;
+        font-size: 11px;
+        padding-top: 9px;
+        margin: 5px auto;
+    }
+}

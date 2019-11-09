@@ -1,0 +1,22 @@
+.comments {
+    padding: 15px 7px;
+    border-bottom: 2px solid #fff;
+    background: #f2f3f5;
+    ion-col {
+        ion-text {
+            color: #272729;
+            font-size: 18px;
+            line-height: 1.0em;
+        }
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    }
+    p {
+        color: #8a9295;
+        font-size: 11px;
+    }
+}

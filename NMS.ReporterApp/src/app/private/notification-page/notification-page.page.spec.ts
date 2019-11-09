@@ -1,0 +1,27 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { NotificationPagePage } from './notification-page.page';
+
+describe('NotificationPagePage', () => {
+  let component: NotificationPagePage;
+  let fixture: ComponentFixture<NotificationPagePage>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ NotificationPagePage ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(NotificationPagePage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,244 @@
+ion-card {
+    background-color: #e9ebe8;
+}
+
+ion-grid {
+    .grid-footer {
+        background: #f7f7f7;
+        .letter-set {
+            p {
+                background: #c5e8b6;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                color: #6db746 !important;
+            }
+            .I-icon {
+                padding: 4px 0px 0px 8px;
+            }
+            .R-icon {
+                padding: 4px 0px 0px 8px;
+            }
+            .tick-icon {
+                ion-icon {
+                    padding: 4px 0px 0px 8px;
+                }
+            }
+        }
+        p {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #d5e0cf;
+            color: #7fab6e;
+            border-radius: 50%;
+            margin-right: 8px;
+            padding-top: 3px;
+            font-size: 11px;
+        }
+        .beat {
+            width: 18px;
+            height: 18px;
+            background: rgb(109, 109, 109);
+            border-radius: 50%;
+        }
+        .beat-text {
+            font-size: 13px;
+            font-weight: lighter;
+        }
+        ion-col:first-child {
+            padding: 3px 4px;
+        }
+        .create-icon {
+            width: 18px;
+            height: 18px;
+            background: rgb(109, 109, 109);
+            border-radius: 50%;
+        }
+        ion-icon[name='create'] {
+            color: #fff;
+            padding: 4px;
+            font-size: 11px;
+            background: #c0c3cc;
+            border-radius: 50%;
+            vertical-align: bottom;
+            margin: 2px 3px 0 0;
+        }
+        ion-icon[name='lock'] {
+            color: #fff;
+            padding: 4px;
+            font-size: 11px;
+            background: #848b9b;
+            border-radius: 50%;
+            vertical-align: bottom;
+            margin-right: 3px;
+        }
+        .attachment-count {
+            font-size: 10px;
+        }
+    }
+    .show-more {
+        color: #C00000;
+        background: white;
+        font-size: 12px;
+        border-bottom: 1px solid lightgray;
+        ion-col:nth-child(2) {
+            margin-top: -5px;
+        }
+    }
+    .comment-section {
+        background: #fff;
+        .letters {
+            width: 25px;
+            height: 25px;
+            background: #c0c3cc;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 11px;
+            margin: 0 auto;
+            padding-top: 6px;
+        }
+        .time {
+            width: 101%;
+            margin-top: 14%;
+        }
+        .ago-timing {
+            font-size: 10px;
+        }
+        .urdu-desc {
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+    }
+    .button-reopen {
+        border: 1px solid lightgray;
+        padding: 5px 15px 5px 15px;
+        background: white;
+        color: #1f2630;
+        border-radius: 4px;
+        font-size: 11px;
+    }
+    .reporter-image {
+        width: 28px;
+        height: 28px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .tag {
+        float: left;
+    }
+    ion-row {
+        .clock-icon {
+            display: inline-block;
+            ion-icon {
+                color: #0F52BA;
+            }
+            p:nth-child(2) {
+                margin-left: 2px;
+            }
+        }
+    }
+    ion-row:first-child {
+        ion-col:first-child {
+            p {
+                background: #0ff0e2;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                padding-top: 7px;
+                color: #fff;
+            }
+        }
+        ion-col:nth-child(2) {
+            p:first-child {
+                color: #7d7f7e;
+                font-size: 11px;
+            }
+            p:nth-child(2) {
+                color: #353638;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+        ion-col:nth-child(3) {
+            p {
+                color: #b1b6b9;
+                font-size: 11px;
+            }
+        }
+        ion-col:nth-child(4) {
+            p {
+                color: #666d77;
+                font-size: 18px;
+                line-height: 1.7em;
+            }
+        }
+    }
+    ion-row:nth-child(2) {
+        // background: #d6dfe8;
+        padding: 4px 0;
+        border-bottom: 1px solid lightgray;
+        p {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        ion-col:first-child {
+            // color: #8c949f;
+            font-size: 11px; // border-right: 2px solid #848b9b;
+            p {
+                ion-avatar {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                }
+            }
+            p:nth-child(2) {
+                vertical-align: top; // color: #3c434d;
+                font-size: 13px;
+                padding-top: 8px;
+                color: #1f2630;
+            }
+        }
+        ion-col:nth-child(2) {
+            font-size: 11px;
+            p:first-child {
+                vertical-align: top;
+                font-size: 13px;
+                margin-top: 8px;
+                padding-right: 8px;
+                color: #1f2630;
+            }
+            p:nth-child(2) {
+                ion-avatar {
+                    width: 30px;
+                    height: 30px;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+    ion-row:nth-child(3) {
+        ion-col {
+            font-size: 11px;
+            p {
+                padding-top: 5px;
+                ion-icon {
+                    width: 30px;
+                    height: 30px;
+                    color: #dd0100;
+                    margin-right: 8px;
+                }
+            }
+            p:nth-child(2) {
+                vertical-align: top;
+                font-size: 13px;
+                padding-top: 8px;
+            }
+        }
+    }
+    ion-row:nth-child(4) {
+        border-top: 1px solid lightgray;
+        color: aliceblue;
+    }
+}

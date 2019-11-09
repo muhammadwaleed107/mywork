@@ -1,0 +1,47 @@
+<ion-grid no-padding>
+  <ion-row>
+    <ion-col size="11">
+      <p no-margin text-center>You are 0.5 miles away from your destination (00:30:25)</p>
+    </ion-col>
+    <ion-col text-right>
+      <p no-margin><ion-icon name="close"></ion-icon></p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ng-container *ngIf="!isSearchActive">
+    <ion-col>
+      <hr style="opacity: 1;">
+      <p class="circle">All</p>
+    </ion-col>
+    <ion-col>
+        <hr>
+      <p class="circle dark-grey" (click)="presentPopover($event)">B</p>
+    </ion-col>
+    <ion-col>
+      <!-- <p class="circle dark-grey" (click)="status=!status" [ngClass]="status ? 'highlight' : ''">
+        <ion-icon name="pin" ></ion-icon>
+      </p> -->
+      <hr>
+      <p class="circle dark-grey" (click)="status=!status">
+          <ion-icon name="pin" ></ion-icon>
+        </p>
+    </ion-col>
+    <ion-col>
+        <hr>
+      <p class="circle dark-grey" (click)="status2=!status2">T</p>
+    </ion-col>
+  </ng-container>
+  <ng-container *ngIf="isSearchActive">
+      <ion-col size="9" no-padding>
+          <ion-input placeholder="Search"></ion-input>
+        </ion-col>
+  </ng-container>
+    <ion-col size="3">
+      <!-- <p class="circle dark-grey" (click)="status3=!status3" [ngClass]="status3 ? 'highlight' : ''"> -->
+          <hr>
+      <p class="circle dark-grey" (click)="searchActive()">
+        <ion-icon name="search" ></ion-icon>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,15 @@
+<ion-card no-margin>
+  <ion-row>
+    <ion-col size="2">
+      <p no-margin>{{item.CreatedAt |date}}</p>
+    </ion-col>
+    <ion-col size="8" class="urdu-desc ">
+      <p no-margin>{{item.body}}</p>
+    </ion-col>
+    <ion-col size="2" text-right>
+      <p no-margin class="circle">
+        {{item.TemplateShortCode}}
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-card>

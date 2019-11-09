@@ -1,0 +1,7 @@
+<ion-list>
+  <h3 padding-start>Select News Type</h3>
+    <ion-item  *ngFor="let item of types" (click)="close(item)">
+      <ion-label>{{item.BeatName}}</ion-label>
+    </ion-item>
+
+  </ion-list>

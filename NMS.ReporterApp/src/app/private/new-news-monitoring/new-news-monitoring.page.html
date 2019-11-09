@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Monitoring Team</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+          <ion-col size="12" size-md="4">
+            <app-news-monitoring-card></app-news-monitoring-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row no-margin>
+      <ion-select class="shared" placeholder="Write Slug">
+        <ion-select-option value="S">Sahiwal Case</ion-select-option>
+        <ion-select-option value="J">Jalli Account</ion-select-option>
+        <ion-select-option value="N">NAB Cases</ion-select-option>
+      </ion-select>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-input no-padding class="shared" placeholder="Upload or Capture Image">
+        <!-- <ion-button>
+          <ion-icon name="send"></ion-icon>
+        </ion-button> -->
+        <ion-button slot="end">
+          <ion-icon name="camera" onclick="" ></ion-icon>
+        </ion-button>
+      </ion-input>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-select class="half_width" floating placeholder="News">
+        <ion-select-option value="K">Karachi</ion-select-option>
+        <ion-select-option value="L">Lahore</ion-select-option>
+        <ion-select-option value="P">Peshawar</ion-select-option>
+      </ion-select>
+      <ion-select class="half_width" floating placeholder="Chaneel">
+        <ion-select-option value="S">Samaa</ion-select-option>
+        <ion-select-option value="G">Geo</ion-select-option>
+        <ion-select-option value="A">Ary</ion-select-option>
+      </ion-select> 
+       <ion-button>
+          <ion-icon name="send"></ion-icon>
+        </ion-button>
+    </ion-row>
+
+  </ion-grid>
+</ion-footer>

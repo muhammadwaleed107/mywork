@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Guest Assignment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <span class="mainHeading">
+          <ion-icon color="danger" name="close"></ion-icon>
+          Cencelled Guest
+        </span>
+      </ion-col>
+    </ion-row>
+    <div class="my-card grey-card" margin-bottom>
+      <div class="my-inner-card">
+        <ion-row>
+          <ion-col>
+            <p *ngIf="!guestInfo.GuesttProfilePicture"><img src="../../../assets/img/534201.jpg"></p>
+            <p *ngIf="guestInfo.GuesttProfilePicture"><img [src]="guestInfo.GuesttProfilePicture"></p>
+          </ion-col>
+          <ion-col size="7">
+            <p>{{guestInfo.GuestName}}</p>
+          </ion-col>
+          <ion-col>
+            <a href="tel:03001234567" style="font-size: 18px">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col size="3" text-right>
+            <p>{{getTimeFromNow(guestInfo.AssignmentCreatedAt) }}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <p class="urdu-desc">{{guestInfo.GuestAssignmentTitle}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <img *ngIf="!guestInfo.AssignedByProfileImage" src="../../../assets/img/534201.jpg">
+            <img *ngIf="guestInfo.AssignedByProfileImage" [src]="guestInfo.AssignedByProfileImage" />
+            <p>{{guestInfo.AssignedByName}}</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="calendar"></ion-icon>
+            <p>{{getDateByFormat(guestInfo.EventAt,'HH:MM')}}17:00</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="desktop"></ion-icon>
+            <p>{{guestInfo.ProgramName}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col no-padding text-left>
+            <p>Deadline: <span>{{getDateByFormat(guestInfo.DeadlineAt,'HH')}}hr</span></p>
+          </ion-col>
+          <ion-col no-padding text-right>
+            <ion-icon name="car"></ion-icon>
+            <p>{{guestInfo.SourceName}}</p>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" no-padding>
+        <ion-list class="drop-down" no-padding>
+          <ion-item>
+            <ion-label>Select Reason</ion-label>
+            <ion-select [(ngModel)]="selectedReason">
+              <ion-select-option value="Hasan Iqbal">Reason 1</ion-select-option>
+              <ion-select-option value="Anil">Reason 2</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="1" no-padding>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" no-padding>
+        <ion-list class="description-textarea" no-padding>
+          <ion-item>
+            <ion-textarea placeholder="یہاں لکھیں"></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" no-padding>
+        <ion-button expand="full" color="danger" shape="round">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

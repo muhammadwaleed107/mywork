@@ -1,0 +1,236 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-back-button></ion-back-button>
+    <ion-title>Existing News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-filters></app-filters>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="12" size-md="4" *ngFor="let item of slugNews;">
+        <app-exist-news-monitoring [sluginfo]="item"></app-exist-news-monitoring>
+      </ion-col>
+      <!-- <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <app-exist-news-monitoring></app-exist-news-monitoring>
+      </ion-col> -->
+
+      
+      <!-- <ion-col size="12" size-md="4">
+        <ion-card no-margin>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="2">
+                <p class="circle">N</p>
+              </ion-col>
+              <ion-col size="10">
+                <h5 no-margin>Lahore - Sahiwal CTD</h5>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p class="sky-blue">3 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font sky-blue">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">TK</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>25 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">OC</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>57 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">PKG</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-right size="7" offset="3">
+                <p no-margin class="read-more">+5 more</p>
+              </ion-col>
+            </ion-row>
+            <ion-row class="news-detail">
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col size="4">
+                    <p class="circle-sm light-grey">
+                      <ion-icon name="create"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col size="8" [style.border-right]="'2px solid #bfc2c9'">
+                    <p class="circleTransparent-sm">
+                      <ion-icon name="attach"></ion-icon>(2)
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col size="3">
+                    <p class="circle-sm dark-grey">
+                      <ion-icon name="create"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col size="9">
+                    <p class="beat">Crime</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col>
+                    <p class="circle-sm light-yellow">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col>
+                    <p class="circle-sm light-pink">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col>
+                    <p class="circle-sm light-green">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card no-margin>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="2">
+                <p class="circle">N</p>
+              </ion-col>
+              <ion-col size="10">
+                <h5 no-margin>Lahore - Sahiwal CTD</h5>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p class="sky-blue">3 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font sky-blue">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">TK</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>25 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">OC</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <p>57 min ago</p>
+              </ion-col>
+              <ion-col size="7" text-right>
+                <p class="urdu-desc urdu-font">Lahore - Sahiwal CTD</p>
+              </ion-col>
+              <ion-col size="2">
+                <p class="circle light-grey">PKG</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-right size="7" offset="3">
+                <p no-margin class="read-more">+5 more</p>
+              </ion-col>
+            </ion-row>
+            <ion-row class="news-detail">
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col size="4">
+                    <p class="circle-sm light-grey">
+                      <ion-icon name="create"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col size="8" [style.border-right]="'2px solid #bfc2c9'">
+                    <p class="circleTransparent-sm">
+                      <ion-icon name="attach"></ion-icon>(2)
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col size="3">
+                    <p class="circle-sm dark-grey">
+                      <ion-icon name="create"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col size="9">
+                    <p class="beat">Crime</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4">
+                <ion-row>
+                  <ion-col>
+                    <p class="circle-sm light-yellow">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col>
+                    <p class="circle-sm light-pink">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                  <ion-col>
+                    <p class="circle-sm light-green">
+                      <ion-icon name="checkmark"></ion-icon>
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+</ion-content>

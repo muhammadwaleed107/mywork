@@ -1,0 +1,229 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Guest Assignment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <div class="my-card" [ngClass]="guest ? 'grey-card':''" margin-bottom *ngFor="let guest of guests;">
+      <div class="my-inner-card">
+        <ion-row>
+          <ion-col>
+            <p *ngIf="!guest.GuesttProfilePicture"><img src="../../../assets/img/534201.jpg"></p>
+            <p *ngIf="guest.GuesttProfilePicture"><img [src]="guest.GuesttProfilePicture"></p>
+          </ion-col>
+          <ion-col size="7">
+            <p>{{guest.GuestName}}</p>
+          </ion-col>
+          <ion-col>
+            <a href="tel:03001234567" style="font-size: 18px">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col size="3" text-right>
+            <p>{{getTimeFromNow(guest.AssignmentCreatedAt) }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="urdu-desc">{{guest.GuestAssignmentTitle}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <img *ngIf="!guest.AssignedByProfileImage" src="../../../assets/img/534201.jpg">
+            <img *ngIf="guest.AssignedByProfileImage" [src]="guest.AssignedByProfileImage" />
+            <p>{{guest.AssignedByName}}</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="calendar"></ion-icon>
+            <p>{{getDateByFormat(guest.EventAt,'HH:MM')}}17:00</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="desktop"></ion-icon>
+            <p>{{guest.ProgramName}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col no-padding text-left>
+            <p>Deadline: <span>{{getDateByFormat(guest.DeadlineAt,'HH')}}hr</span></p>
+          </ion-col>
+          <ion-col no-padding text-right>
+            <ion-icon name="car"></ion-icon>
+            <p>{{guest.SourceName}}</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row class="deadline-btns">
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Progress</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Extend</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button (click)="navTo('/home/guest-confirmation',guest)" fill="outline" color="light"
+            size="small">Done</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button (click)="navTo('/home/guest-cancelletion',guest)" fill="outline" color="light"
+            size="small">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <div class="my-card" margin-bottom>
+      <div class="my-inner-card">
+        <ion-row>
+          <ion-col>
+            <p><img src="../../../assets/img/534201.jpg"></p>
+          </ion-col>
+          <ion-col size="7">
+            <p>Fawad Chaudhry</p>
+          </ion-col>
+          <ion-col>
+            <a href="tel:03001234567" style="font-size: 18px">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col size="3" text-right>
+            <p>15 sec ago</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="urdu-desc">اک فوج کے شعبہ تعلقات عامہ آئی ایس پی آر کے ڈائریکٹر جنرل (ڈی جی) میجر جنرل آصف غفور کا
+              کہنا ہے</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="../../../assets/img/534201.jpg">
+            <p>Z.Iqbal</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="calendar"></ion-icon>
+            <p>17:00</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="desktop"></ion-icon>
+            <p>Tabdeeli</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col no-padding text-left>
+            <p>Deadline: <span>1hr</span></p>
+          </ion-col>
+          <ion-col no-padding text-right>
+            <ion-icon name="car"></ion-icon>
+            <p>DSNG</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row class="deadline-btns">
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Progress</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Extend</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button routerDirection="forward" [routerLink]="['/home/guest-confirmation']" fill="outline" color="light"
+            size="small">Done</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button routerDirection="forward" [routerLink]="['/home/guest-cancelletion']" fill="outline" color="light"
+            size="small">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="my-card grey-card" margin-bottom>
+      <div class="my-inner-card">
+        <ion-row>
+          <ion-col>
+            <p><img src="../../../assets/img/534201.jpg"></p>
+          </ion-col>
+          <ion-col size="7">
+            <p>Justice Saqib Nisar</p>
+          </ion-col>
+          <ion-col>
+            <a href="tel:03001234567" style="font-size: 18px">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col size="3" text-right>
+            <p>15 sec ago</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="urdu-desc">اک فوج کے شعبہ تعلقات عامہ آئی ایس پی آر کے ڈائریکٹر جنرل (ڈی جی) میجر جنرل آصف غفور کا
+              کہنا ہے</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="../../../assets/img/534201.jpg">
+            <p>Z.Iqbal</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="calendar"></ion-icon>
+            <p>17:00</p>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="desktop"></ion-icon>
+            <p>Tabdeeli</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col no-padding text-left>
+            <p>Deadline: <span>1hr</span></p>
+          </ion-col>
+          <ion-col no-padding text-right>
+            <ion-icon name="car"></ion-icon>
+            <p>DSNG</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="assignment-status">
+          <ion-col size="3">
+            <p><span>Cancelled</span><br>15 sec ago</p>
+          </ion-col>
+          <ion-col size="8">
+            <p class="urdu-desc">اک فوج کے شعبہ تعلقات عامہ آئی ایس پی ا
+              کہنا ہے</p>
+          </ion-col>
+          <ion-col>
+            <p><img src="../../../assets/img/534201.jpg"></p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="assignment-status">
+          <ion-col size="3">
+            <p><span class="in-progress">In progress</span><br>15 sec ago</p>
+          </ion-col>
+          <ion-col size="8">
+            <p class="urdu-desc">اک فوج کے شعبہ تعلقات عامہ آئی ایس پی ا
+              کہنا ہے</p>
+          </ion-col>
+          <ion-col>
+            <p><img src="../../../assets/img/534201.jpg"></p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row class="deadline-btns">
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Progress</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button fill="outline" color="light" size="small">Extend</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button routerDirection="forward" [routerLink]="['/home/guest-confirmation']" fill="outline" color="light"
+            size="small">Done</ion-button>
+        </ion-col>
+        <ion-col no-padding text-center>
+          <ion-button routerDirection="forward" [routerLink]="['/home/guest-cancelletion']" fill="outline" color="light"
+            size="small">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+    </div> -->
+  </ion-grid>
+</ion-content>

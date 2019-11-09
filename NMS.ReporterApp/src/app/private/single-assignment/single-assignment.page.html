@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Assignment Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-assignment-card2 [item]="tickerdata"></app-assignment-card2>
+  <ion-card no-margin>
+    <ion-row>
+      <p no-margin class="border" (click)="showNewsDetail()" [ngClass]="hideNews==false ? 'active-tab' : ''">News Detail
+      </p>
+      <p no-margin class="border" (click)="showComments()" [ngClass]="hideNews==true ? 'active-tab' : ''">Comments</p>
+    </ion-row>
+  </ion-card>
+  <ion-card no-margin *ngIf="!hideNews" class="news">
+    <ng-container *ngFor="let news of tickerdata.NewsList">
+      <app-assignment-news-box [item]="news"></app-assignment-news-box>
+    </ng-container>
+
+    <ion-footer slot="end">
+      <ion-row class="grid-footer">
+        <ion-col size="3">
+          <ion-icon name="create"></ion-icon>
+          <ion-icon name="attach"></ion-icon> <span class="attachment-count">({{tickerdata.MediaCount}})</span>
+        </ion-col>
+        <ion-col size="5">
+          <ion-icon name="lock"></ion-icon>
+          <ion-text>{{tickerdata.BeatName}}</ion-text>
+        </ion-col>
+        <ion-col size="4">
+          <p no-margin text-center>I</p>
+          <p no-margin text-center>R</p>
+          <p no-margin text-center>
+            <ion-icon name="checkmark"></ion-icon>
+          </p>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col no-padding>
+          <ion-item>
+            <textarea placeholder="یہاں لکھیں" #myInput id="myInput" rows="1" (keyup)="resize()" [(ngModel)]="tickerText"></textarea>
+            <ion-icon name="attach"></ion-icon>
+            <ion-icon name="camera"></ion-icon>
+            <p class="send-icon" no-margin>
+              <span (click)="addNews()">
+                <ion-icon name="paper-plane"></ion-icon>
+              </span>
+            </p>
+          </ion-item>
+        </ion-col>
+      </ion-row> -->
+      <!-- <ion-row padding-top class="comment-section">
+        <ion-col no-padding size="9">
+          <textarea placeholder="یہاں لکھیں" #myInput id="myInput" rows="1" (keyup)="resize()"
+            [(ngModel)]="tickerText"></textarea>
+        </ion-col>
+        <ion-col size="3" text-center>
+          <p class="send-icon" no-margin>
+            <span>
+              <ion-icon name="attach"></ion-icon>
+            </span>
+            <span>
+              <ion-icon name="camera"></ion-icon>
+            </span>
+            <span (click)="addNews()" style="color: #da0000;">
+              <ion-icon name="paper-plane"></ion-icon>
+            </span>
+          </p>
+        </ion-col>
+      </ion-row> -->
+      <ion-row>
+        <ion-col size="11" no-padding>
+          <ion-list class="drop-down" no-padding>
+            <ion-item>
+              <p no-margin (click)="beat()" class="light-grey">{{selectedType}}</p>
+              <textarea #myInput id="myInput" rows="1" (keyup)="resize()" [(ngModel)]="tickerText"
+                placeholder="ٹکر یہاں لکھیں"></textarea>
+              <!-- <ion-input placeholder="ٹکر یہاں لکھیں" type="text" [(ngModel)]="tickerText"></ion-input> -->
+              <!-- <ion-icon name="attach"></ion-icon> -->
+              <div class="upload-file">
+                <ion-icon name="camera"></ion-icon>
+                <input type="file" name="myFile" (change)="handleFileInput($event.target.files)">
+              </div>
+            </ion-item>
+
+          </ion-list>
+
+        </ion-col>
+        <ion-col no-padding text-center>
+          <p class="send-icon" no-margin>
+            <span (click)="addNews()">
+              <ion-icon name="paper-plane"></ion-icon>
+            </span>
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+  <ion-card no-margin *ngIf="hideNews">
+    <ng-container *ngFor="let comment of tickerdata.CommentList">
+      <app-assignment-comment-box [item]="comment"></app-assignment-comment-box>
+    </ng-container>
+    <ion-row padding-top class="comment-section">
+      <ion-col no-padding size="10">
+        <textarea placeholder="یہاں لکھیں" #myInput id="myInput" rows="1" (keyup)="resize()"
+          [(ngModel)]="tickerText"></textarea>
+      </ion-col>
+      <ion-col size="2" text-center>
+        <p class="send-icon" no-margin>
+          <span (click)="addNews()" style="color: #da0000;">
+            <ion-icon name="paper-plane"></ion-icon>
+          </span>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+<!-- <ion-footer>
+  <ion-row>
+    <ion-col size="11" no-padding>
+      <ion-item>
+        <textarea #myInput id="myInput" rows="1" (keyup)="resize()" [(ngModel)]="tickerText"></textarea>
+        <ion-icon name="attach"></ion-icon>
+        <ion-icon name="camera"></ion-icon>
+      </ion-item>
+    </ion-col>
+    <ion-col size="1" no-padding text-center>
+      <p class="send-icon" no-margin>
+        <span (click)="addNews()">
+          <ion-icon name="paper-plane"></ion-icon>
+        </span>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-footer> -->

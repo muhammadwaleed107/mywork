@@ -1,0 +1,9 @@
+<ion-row class="comments">
+  <ion-col size="10" text-right>
+    <ion-text class="urdu-desc"> {{item.Message}}</ion-text>
+  </ion-col>
+  <ion-col size="2">
+    <img [src]="item.CreatedByProfileImage">
+  </ion-col>
+  <p no-margin text-left>{{item.CreatedAt | date}}</p>
+</ion-row>

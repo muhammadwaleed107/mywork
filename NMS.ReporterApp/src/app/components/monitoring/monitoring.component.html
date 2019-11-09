@@ -1,0 +1,87 @@
+<!-- <ion-header no-margin>
+  <ion-toolbar>
+    <ion-title>Monitoring Team</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="5" offset-lg="7" size-md="6" offset-md="6">
+        <app-news-monitoring-card></app-news-monitoring-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="5" offset-lg="7" size-md="6" offset-md="6">
+        <app-news-monitoring-card></app-news-monitoring-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="5" offset-lg="7" size-md="6" offset-md="6">
+        <app-news-monitoring-card></app-news-monitoring-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer no-margin>
+  <ion-grid>
+    <ion-row no-margin>
+      <ion-col>
+      <ion-select class="shared" placeholder="Write Slug">
+        <ion-select-option value="S">Sahiwal Case</ion-select-option>
+        <ion-select-option value="J">Jalli Account</ion-select-option>
+        <ion-select-option value="N">NAB Cases</ion-select-option>
+      </ion-select>
+    </ion-col>
+    </ion-row>
+    <ion-row no-margin>
+      <!-- <ion-button>
+            <ion-icon name="send"></ion-icon>
+          </ion-button> -->
+      <!-- <ion-input no-padding class="shared" placeholder="Upload or Capture Image">
+          <ion-button slot="end">
+            <ion-icon name="camera" onclick="" ></ion-icon>
+          </ion-button>
+        </ion-input> -->
+      <!-- <ion-col>
+        <ion-list no-padding>
+            <ion-item>
+              <p no-margin>Oth</p>
+              <ion-input placeholder="Capture Snapshot" type="text"></ion-input>
+              <ion-icon name="camera"></ion-icon>
+            </ion-item>`
+          </ion-list>
+        </ion-col> -->
+        <ion-col>
+      <ion-list class="drop-down" no-padding>
+        <ion-item>
+          <p no-margin>OC</p>
+          <ion-input placeholder="Capture Snapshot" type="text"></ion-input>
+          <ion-icon name="camera"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    </ion-row>
+    <ion-row no-margin>
+      <ion-col size="5">
+      <ion-select placeholder="News">
+        <ion-select-option value="K">Karachi</ion-select-option>
+        <ion-select-option value="L">Lahore</ion-select-option>
+        <ion-select-option value="P">Peshawar</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-col size="6">
+      <ion-select placeholder="Channel">
+        <ion-select-option value="S">Samaa</ion-select-option>
+        <ion-select-option value="G">Geo</ion-select-option>
+        <ion-select-option value="A">Ary</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-col size="1" text-center class="send-icon">
+        <ion-icon name="paper-plane"></ion-icon>
+    </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-footer>

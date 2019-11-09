@@ -1,0 +1,150 @@
+<ion-card no-margin>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <p class="circle">N</p>
+      </ion-col>
+      <ion-col size="9">
+        <h5 no-margin>{{sluginfo.SlugTitle}}</h5>
+      </ion-col>
+      <ion-col>
+        <p>{{sluginfo.NewsCount}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of getNews(sluginfo);">
+      <ion-col size="3">
+        <p [ngClass]="getTimeFromNow(item.ModifiedAt).indexOf('minute') !== -1  ? 'sky-blue' : ''">{{ getTimeFromNow(item.ModifiedAt)}}</p>
+      </ion-col>
+      <ion-col size="7" text-right>
+        <p class="urdu-desc urdu-font" [ngClass]="getTimeFromNow(item.ModifiedAt).indexOf('minute') !== -1  ? 'sky-blue' : ''">{{item.body}}</p>
+      </ion-col>
+      <ion-col size="2">
+        <p class="circle light-grey">{{item.TemplateShortCode}}</p>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+        <ion-col size="3">
+          <p>25 min ago</p>
+        </ion-col>
+        <ion-col size="7" text-right>
+          <p class="urdu-desc urdu-font">اسلام آباد: قومی احتساب بیورو (نیب) نے پاکستان پیپلز پارٹی (پی پی پی) کے رہنما
+            اور اسپیکر سندھ اسمبلی آغا سراج درانی کو گرفتار کرلیا</p>
+        </ion-col>
+        <ion-col size="2">
+          <p class="circle light-grey">OC</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          <p>57 min ago</p>
+        </ion-col>
+        <ion-col size="7" text-right>
+          <p class="urdu-desc urdu-font">دوسری جانب ذرائع نے بتایا تھا کہ آغا سراج درانی پر سرکاری فنڈز میں مبینہ خورد
+            برد کا بھی الزام ہے۔</p>
+        </ion-col>
+        <ion-col size="2">
+          <p class="circle light-grey">PKG</p>
+        </ion-col>
+      </ion-row> -->
+    <ion-row>
+      <ion-col text-right size="7" offset="3">
+        <p no-margin class="read-more" (click)="navTo(sluginfo)">+{{sluginfo.NewsList.length - 3}} more</p>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row class="news-detail">
+          <ion-col size="4">
+            <ion-row>
+              <ion-col size="4">
+                <p class="circle-sm light-grey">
+                  <ion-icon name="create"></ion-icon>
+                </p>
+              </ion-col>
+              <ion-col size="8" [style.border-right]="'2px solid #bfc2c9'">
+                <p class="circleTransparent-sm">
+                  <ion-icon name="attach"></ion-icon>(2)
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="6">
+            <ion-row>
+              <ion-col size="3">
+                <p class="circle-sm dark-grey">
+                  <ion-icon name="create"></ion-icon>
+                </p>
+              </ion-col>
+              <ion-col size="9">
+                <p class="beat">Crime</p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="2">
+            <ion-row>
+              <ion-col>
+                <p class="circle-sm light-green">
+                  <ion-icon name="checkmark"></ion-icon>
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row> -->
+    <ion-row class="news-detail">
+      <ion-col size="3">
+        <ion-row>
+          <ion-col size="4">
+            <p class="circle-sm light-grey" (click)="navTo()">
+              <ion-icon name="create"></ion-icon>
+            </p>
+          </ion-col>
+          <ion-col size="8" [style.border-right]="'2px solid #bfc2c9'">
+            <p class="circleTransparent-sm">
+              <ion-icon name="attach"></ion-icon>({{sluginfo.MediaCount}})
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="2">
+        <!-- <ion-col size="3">
+              <p class="circle-sm dark-grey">
+                <ion-icon name="create"></ion-icon>
+              </p>
+            </ion-col> -->
+        <p class="beat">{{sluginfo.BeatName}}</p>
+      </ion-col>
+      <ion-col size="7">
+        <ion-row class="beat-option">
+          <!-- <ion-col no-padding>
+                  <p class="circle-sm" (click)="status=!status" [ngClass]="status ? 'light-green' : ''">
+                    I
+                  </p>
+                </ion-col>
+                <ion-col no-padding>
+                  <p class="circle-sm light-pink">
+                    R
+                  </p>
+                </ion-col>
+                <ion-col no-padding>
+                  <p class="circle-sm light-green">
+                    <ion-icon name="checkmark"></ion-icon>
+                  </p>
+                </ion-col> -->
+          <!-- <p (click)="statusLive=!statusLive" [ngClass]="statusLive ? 'live-online' : ''">LIVE</p>
+            <p class="circle" (click)="status=!status" [ngClass]="status ? 'light-green' : ''">I</p> -->
+
+          <p (click)="statusLive=!statusLive" [ngClass]="sluginfo.IsLive ? 'live-online' : ''">LIVE</p>
+          <p class="circle" (click)="status=!status" [ngClass]="sluginfo.IsImportant ? 'light-green' : ''">I</p>
+
+
+          <p class="circle" [ngClass]="sluginfo.IsRelevant ? 'light-green' : ''">
+            R
+          </p>
+          <p class="circle" [ngClass]="sluginfo.IsVerified ? 'light-green' : ''">
+            <ion-icon name="checkmark"></ion-icon>
+          </p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-card>

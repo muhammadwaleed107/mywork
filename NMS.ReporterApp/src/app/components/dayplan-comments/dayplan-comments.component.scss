@@ -1,0 +1,33 @@
+
+ion-row{
+    border: solid;
+    border-width: 1px;
+    border-color: #d7d8da;
+    border-collapse: collapse;
+    ion-col:first-child{
+        .small-text{
+            padding-top: 5px;
+            color: #8c949f;
+            font-size: 11px;
+        }
+    }
+    ion-col:nth-child(2){
+        .urdu-font {
+            line-height: 1.7em;
+            font-weight: 600;
+            // padding-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    ion-col:nth-child(3){
+        img{
+            border-radius: 50%;
+            margin: 0px auto;
+            height: 30px;
+            width: 30px;
+        }
+    }
+    
+}

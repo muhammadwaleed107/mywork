@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>League</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="http://nmsdatacom.bolnetwork.com/nmsapp/assets/imgs/league-logo/input-diamond.png">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-datetime [(ngModel)]="dateTime" display-format="MMM DD, YYYY"></ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center [class.apply_tab]="dataTypes==0" (click)="datatypeActive(0)">
+        <p>DAILY</p>
+      </ion-col>
+      <ion-col text-center [class.apply_tab]="dataTypes==1" (click)="datatypeActive(1)">
+        <p>WEEKLY</p>
+      </ion-col>
+      <ion-col text-center [class.apply_tab]="dataTypes==2" (click)="datatypeActive(2)">
+        <p>MONTHLY</p>
+      </ion-col>
+    </ion-row>
+    <ion-card no-margin (click)="openModal()">
+      <ion-row>
+        <ion-col size="3" size-md="2" no-padding>
+          <ion-thumbnail>
+            <img src="../../../assets/img/karachi.png">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="9" size-md="10">
+          <ion-row>
+            <ion-col size="9" no-padding>
+              <h2 no-margin>Arif Mehmood</h2>
+              <p no-margin>
+                <ion-icon name="person"></ion-icon> Caption Karachi Wolves</p>
+            </ion-col>
+            <ion-col size="3" text-center>
+
+              <img src="http://d1ouwe0zp93mt3.cloudfront.net/reporter3476">
+
+            </ion-col>
+          </ion-row>
+          <hr no-margin>
+          <ion-row>
+            <ion-col size="9">
+              <p class="text">Difference</p>
+              <ion-button class="RatingBtn">4</ion-button>
+              &nbsp;
+              <p class="text">Exclusive</p>
+              <ion-button class="NewsBtn">2</ion-button>
+
+            </ion-col>
+            <ion-col size="3" text-center>
+              <p no-margin class="rank_slot">1</p>
+              <p no-margin class="rank">Rank</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+    <ion-card no-margin>
+      <ion-row>
+        <ion-col size="3" no-padding size-md="2">
+          <ion-thumbnail>
+            <img src="../../../assets/img/lahore.png">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="9" size-md="10">
+          <ion-row>
+            <ion-col size="9" no-padding>
+              <h2 no-margin>Baber Dogar</h2>
+              <p no-margin>
+                <ion-icon name="person"></ion-icon> Caption Lahore Loins</p>
+            </ion-col>
+            <ion-col size="3" text-center>
+
+              <img src="http://d1ouwe0zp93mt3.cloudfront.net/reporter1425">
+
+            </ion-col>
+          </ion-row>
+          <hr no-margin>
+          <ion-row>
+            <ion-col size="9">
+              <p class="text">Difference</p>
+              <ion-button class="RatingBtn">2</ion-button>
+              <!-- <p class="text">Excusive News</p>
+              <ion-button class="NewsBtn">2</ion-button> -->
+            </ion-col>
+            <ion-col size="3" text-center>
+              <p no-margin class="rank_slot">2</p>
+              <p no-margin class="rank">Rank</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+    <ion-card no-margin>
+      <ion-row>
+        <ion-col size="3" no-padding size-md="2">
+          <ion-thumbnail>
+            <img src="../../../assets/img/quetta.png">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="9" size-md="10">
+          <ion-row>
+            <ion-col size="9" no-padding>
+              <h2 no-margin>Rana Tahir</h2>
+              <p no-margin>
+                <ion-icon name="person"></ion-icon> Caption Quetta Canis</p>
+            </ion-col>
+            <ion-col size="3" text-center>
+
+              <img src="http://nmsdatacom.bolnetwork.com/nmsapp/assets/imgs/8258.jpg">
+
+            </ion-col>
+          </ion-row>
+          <hr no-margin>
+          <ion-row>
+            <ion-col size="9">
+                <p class="text">Difference</p>
+                <ion-button class="RatingBtn">-1</ion-button>
+                <!-- <p class="text">Excusive News</p>
+                <ion-button class="NewsBtn">2</ion-button> -->
+            </ion-col>
+            <ion-col size="3" text-center>
+              <p no-margin class="rank_slot">1</p>
+              <p no-margin class="rank">Rank</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+    <!-- <ion-card no-margin>
+      <ion-row>
+        <ion-col size="3">
+          <ion-thumbnail>
+            <img src="../../../assets/img/quetta.png">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="9">
+          <ion-row>
+            <ion-col size="9" no-padding>
+              <h2 no-margin>Rana Tahir</h2>
+              <p no-margin>
+                <ion-icon name="person"></ion-icon> Caption Quetta Canis</p>
+            </ion-col>
+            <ion-col size="3" text-right>
+
+              <img src="http://nmsdatacom.bolnetwork.com/nmsapp/assets/imgs/8258.jpg">
+
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <p class="text">Difference</p>
+            <p class="RatingBtn">-1</p>
+            <p class="text">Excusive News</p>
+            <p class="NewsBtn">4</p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-card> -->
+
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,51 @@
+ion-grid {
+    ion-row:first-child {
+        background: #f7dbda;
+        padding: 8px 0;
+        ion-col:first-child {
+            p {
+                color: #da0000;
+                font-size: 11px;
+            }
+        }
+        ion-col:nth-child(2) {
+            p {
+                color: #da0000;
+                font-size: 12px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+    hr {
+        width: 30px;
+        background: #da0000;
+        opacity: 0;
+        height: 2px;
+        margin: 0 auto 5px;
+    }
+    .circle {
+        text-align: center;
+        width: 30px;
+        background: var(--ion-red);
+        height: 30px;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 11px;
+        padding-top: 9px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .dark-grey {
+        background: #a7a8ad;
+    }
+    .highlight {
+        background: var(--ion-red);
+    }
+    ion-input {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 8px;
+    }
+}

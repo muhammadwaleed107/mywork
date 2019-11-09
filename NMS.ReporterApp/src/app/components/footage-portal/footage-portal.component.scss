@@ -1,0 +1,110 @@
+ion-card-header{
+    padding: 10px 5px;
+}
+
+.top-icons{
+    color: #c0c4c7;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    background: #42b242;
+    border-radius: 50%;
+}
+
+.image {
+    height: 30px;
+    width: 30px; // margin-top: 10px;
+}
+
+.padding {
+    padding-top: 4px;
+}
+
+.sky-blue{
+    color: #99bde1;
+    font-weight: 600;
+}
+
+.upload {
+    background-color: #f7f8fa;
+    padding: 6%;
+    h4{
+        color: #c1c8ce;
+        font-size: 13px;
+    }
+    ion-button{
+        --background: var(--ion-red);
+    --border-radius: 25px;
+    font-size: 11px;
+    }
+}
+ion-list {
+    position: absolute;
+    top: 90px;
+    border-radius: 2px;
+    padding: 0;
+    background: none;
+    ion-item {
+        --border-style: none;
+        display: inline-block;
+        --background: rgba(0, 0, 0, .6);
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        --min-height: 25px;
+        max-width: 55px;
+        width: 80px;
+        ion-icon {
+            color: #fff;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.imgs {
+    overflow-x: auto;
+    white-space: nowrap;
+    div {
+        width: 100px;
+        height: 120px;
+        display: inline-block;
+        margin: 0 5px;
+        position: relative;
+        top: 0;
+        left: 0;
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 6px;
+        }
+        p {
+            font-size: 11px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        span {
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+            text-align: right;
+            ion-icon{
+                cursor: pointer;
+            }
+        }
+    }
+}

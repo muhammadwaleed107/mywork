@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<script>
+
+window.ga = window.ga || function() {
+  (ga.q = ga.q || []).push(arguments);
+};
+ga('create', 'UA-33848682-1', 'auto');
+ga('set', 'transport', 'beacon');
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+<meta charset="utf-8">
+<meta name="description" content="Simplest possible examples of HTML, CSS and JavaScript.">
+<meta name="author" content="//samdutton.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta itemprop="name" content="simpl.info: simplest possible examples of HTML, CSS and JavaScript">
+<meta itemprop="image" content="/images/icons/icon192.png">
+<meta id="theme-color" name="theme-color" content="#fff">
+
+<link rel="icon" href="/images/icons/icon192.png">
+
+<base target="_blank">
+
+
+<title>WEB RTC PeerConnection Video Calling</title>
+
+<link rel="stylesheet" href="main.css">
+
+<style>
+  button {
+    margin: 0 20px 0 0;
+    width: 85.9px;
+  }
+
+  button#hangupButton {
+    margin: 0;
+  }
+
+  p.borderBelow {
+    margin: 0 0 1.5em 0;
+    padding: 0 0 1.5em 0;
+  }
+
+  video {
+    height: 225px;
+    margin: 0 0 20px 0;
+    vertical-align: top;
+    width: calc(50% - 13px);
+  }
+
+  video#localVideo {
+    margin: 0 20px 20px 0;
+  }
+
+  @media (max-width: 400px) {
+
+    button {
+      width: 83px;
+    }
+
+    button {
+      margin: 0 11px 10px 0;
+    }
+
+    video {
+      height: 90px;
+      margin: 0 0 10px 0;
+      width: calc(50% - 7px);
+    }
+
+    video#localVideo {
+      margin: 0 10px 20px 0;
+    }
+
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <h1>WEB RTC Video Calling</h1>
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+    <div>
+      <button id="startButton">Start</button>
+      <button id="callButton">Call</button>
+      <button id="hangupButton">Hang Up</button>
+    </div>
+    <script src="js/main.js"></script>
+
+  </div>
+
+</body>
+
+</html>

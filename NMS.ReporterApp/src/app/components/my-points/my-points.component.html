@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon name="arrow-back" slot="start" (click)="closeModal()"></ion-icon>
+      <!-- <ion-icon name="back" slot="start"></ion-icon> -->
+      <ion-title>My Points</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content padding>
+
+  <ion-grid>
+    <!-- <ion-row class="date">
+      <p><span></span>15 Feb, 2019</p>
+    </ion-row> -->
+    <ion-row *ngFor="let item of MyPointData; let i - index;">
+      <div>
+        <p  [ngClass]="!highlight ? 'News' : ''" >{{ item.PointsType }}</p>
+
+      </div>
+      <div>
+        <p no-margin>{{ item.Title }}<br><span>{{ item.CreatedAt | date }}</span></p>
+      </div>
+      <div>
+        <p>{{ item.NewsPoints }}</p>
+      </div>
+    </ion-row>
+    <!-- <ion-row>
+      <div>
+        <p class="News">N</p>
+      </div>
+      <div>
+        <p no-margin>Paragon Housing scam<br><span>02/02/2019 - 03:30 PM</span></p>
+      </div>
+      <div>
+        <p>02</p>
+      </div>
+    </ion-row> -->
+  </ion-grid>
+
+</ion-content>
